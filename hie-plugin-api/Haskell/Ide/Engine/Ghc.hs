@@ -22,7 +22,7 @@ import           Control.Monad                  ( when )
 import           Data.IORef
 import qualified Data.Map.Strict                   as Map
 import qualified Data.IntMap.Strict                   as IM
-import           Data.Semigroup ((<>), Semigroup)
+-- import           Data.Semigroup ((<>), Semigroup)
 import qualified Data.Set                          as Set
 import qualified Data.Text                         as T
 import qualified Data.Aeson
@@ -37,7 +37,7 @@ import           DynFlags
 import           GHC
 import           IOEnv                             as G
 import qualified HscTypes
-import           Outputable                        (renderWithStyle)
+-- import           Outputable                        (renderWithStyle)
 import           Language.Haskell.LSP.Types        ( NormalizedUri(..), toNormalizedUri )
 
 import           Haskell.Ide.Engine.GhcUtils

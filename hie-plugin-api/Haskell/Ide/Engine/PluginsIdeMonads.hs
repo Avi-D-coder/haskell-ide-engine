@@ -117,11 +117,11 @@ import qualified Data.List                     as List
 import           Data.Dynamic                   ( Dynamic )
 import qualified Data.Map                      as Map
 import           Data.Maybe
-import           Data.Monoid                    ( (<>) )
+-- import           Data.Monoid                    ( (<>) )
 import qualified Data.Set                      as S
 import qualified Data.Text                     as T
 import           Data.Typeable                  ( TypeRep
-                                                , Typeable
+                                                -- , Typeable
                                                 )
 import System.Directory
 import GhcMonad

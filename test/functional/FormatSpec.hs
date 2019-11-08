@@ -53,10 +53,6 @@ spec = do
       formatDoc doc (FormattingOptions 2 True)
       documentContents doc >>= liftIO . (`shouldBe` formattedDocTabSize2)
 
-      sendNotification WorkspaceDidChangeConfiguration (DidChangeConfigurationParams (formatLspConfig "floskell"))
-      formatDoc doc (FormattingOptions 2 True)
-      documentContents doc >>= liftIO . (`shouldBe` formattedFloskell)
-
       sendNotification WorkspaceDidChangeConfiguration (DidChangeConfigurationParams (formatLspConfig "brittany"))
       formatDoc doc (FormattingOptions 2 True)
       documentContents doc >>= liftIO . (`shouldBe` formattedBrittanyPostFloskell)

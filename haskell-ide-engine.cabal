@@ -62,7 +62,6 @@ library
                      , data-default
                      , directory
                      , filepath
-                     , floskell == 0.10.*
                      , fold-debounce
                      , ghc >= 8.0.1
                      , ghc-exactprint

@@ -25,3 +25,9 @@
 [submodule "hie-bios"]
 	path = hie-bios
 	url = https://github.com/mpickering/hie-bios.git
+[submodule "submodules/cabal"]
+	path = submodules/cabal
+	url = git@github.com:Avi-D-coder/cabal.git
+[submodule "submodules/apply-refact"]
+	path = submodules/apply-refact
+	url = https://github.com/mpickering/apply-refact.git

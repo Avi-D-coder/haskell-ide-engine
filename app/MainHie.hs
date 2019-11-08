@@ -61,7 +61,6 @@ plugins includeExamples = pluginDescToIdePlugins allPlugins
       , liquidDescriptor      "liquid"
       , packageDescriptor     "package"
       , pragmasDescriptor     "pragmas"
-      , floskellDescriptor    "floskell"
       , biosDescriptor        "bios"
       , genericDescriptor     "generic"
       ]

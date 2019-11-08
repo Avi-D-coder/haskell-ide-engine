@@ -155,14 +155,14 @@ pattern TypeSigCompat names ty <-
 
 #if __GLASGOW_HASKELL__ >= 800
 namesFromHsIbWc :: HsTypes.LHsSigWcType GhcRn -> [Name]
-namesFromHsIbSig :: HsTypes.LHsSigType GhcRn -> [Name]
+-- namesFromHsIbSig :: HsTypes.LHsSigType GhcRn -> [Name]
 namesFromHsWC :: HsTypes.LHsWcType GhcRn -> [Name]
 -- | Monomorphising type so uniplate is happier.
-#if __GLASGOW_HASKELL__ >= 806
-namesFromHsIbSig = hsib_vars . HsTypes.hsib_ext
-#else
-namesFromHsIbSig = HsTypes.hsib_vars
-#endif
+-- #if __GLASGOW_HASKELL__ >= 806
+-- namesFromHsIbSig = hsib_vars . HsTypes.hsib_ext
+-- #else
+-- namesFromHsIbSig = HsTypes.hsib_vars
+-- #endif
 
 #if __GLASGOW_HASKELL__ <= 804
 namesFromHsWC = HsTypes.hswc_wcs

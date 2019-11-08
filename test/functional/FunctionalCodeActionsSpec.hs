@@ -173,45 +173,6 @@ spec = describe "code actions" $ do
         , "        $ fromMaybe \"Good night, World!\" (Just \"Hello, World!\")"
         ]
       ]
-    describe "formats with floskell" $ hsImportSpec "floskell"
-      [ -- Expected output for simple format.
-        [ "import qualified Data.Maybe"
-        , "import           Control.Monad"
-        , "main :: IO ()"
-        , "main = when True $ putStrLn \"hello\""
-        ]
-      , -- Use an import list and format the output.
-        [ "import qualified Data.Maybe"
-        , "import           Control.Monad (when)"
-        , "main :: IO ()"
-        , "main = when True $ putStrLn \"hello\""
-        ]
-      , -- Multiple import lists, should not introduce multiple newlines.
-        [ "import           System.IO (stdout, hPutStrLn)"
-        , "import           Control.Monad (when)"
-        , "import           Data.Maybe (fromMaybe)"
-        , "-- | Main entry point to the program"
-        , "main :: IO ()"
-        , "main ="
-        , "    when True"
-        , "        $ hPutStrLn stdout"
-        , "        $ fromMaybe \"Good night, World!\" (Just \"Hello, World!\")"
-        ]
-      ,  -- Complex imports for Constructos and functions
-        [ "{-# LANGUAGE NoImplicitPrelude #-}"
-        , "import           System.IO (IO, hPutStrLn, stderr)"
-        , "import           Prelude (Bool(..))"
-        , "import           Control.Monad (when)"
-        , "import           Data.Function (($))"
-        , "import           Data.Maybe (fromMaybe, Maybe(Just))"
-        , "-- | Main entry point to the program"
-        , "main :: IO ()"
-        , "main ="
-        , "    when True"
-        , "        $ hPutStrLn stderr"
-        , "        $ fromMaybe \"Good night, World!\" (Just \"Hello, World!\")"
-        ]
-      ]
   describe "add package suggestions" $ do
     -- Only execute this test with ghc 8.4.4, below seems to be broken in the package.
 #if (defined(MIN_VERSION_GLASGOW_HASKELL) && (MIN_VERSION_GLASGOW_HASKELL(8,4,0,0)))
