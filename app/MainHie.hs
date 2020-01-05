@@ -42,6 +42,7 @@ import           Haskell.Ide.Engine.Plugin.Haddock
 import           Haskell.Ide.Engine.Plugin.HfaAlign
 import           Haskell.Ide.Engine.Plugin.HsImport
 import           Haskell.Ide.Engine.Plugin.Liquid
+import           Haskell.Ide.Engine.Plugin.Ormolu
 import           Haskell.Ide.Engine.Plugin.Package
 import           Haskell.Ide.Engine.Plugin.Pragmas
 
@@ -66,6 +67,7 @@ plugins includeExamples = pluginDescToIdePlugins allPlugins
       , floskellDescriptor    "floskell"
       , genericDescriptor     "generic"
       , ghcmodDescriptor      "ghcmod"
+      , ormoluDescriptor      "ormolu"
       ]
     examplePlugins =
       [example2Descriptor "eg2"
