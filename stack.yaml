@@ -5,6 +5,8 @@ packages:
 
 extra-deps:
 # - ./submodules/HaRe
+- git: https://github.com/ndmitchell/hlint.git
+  commit: 5f267eb873e349fc010a4a0da7778211853b6f03
 
 - apply-refact-0.7.0.0
 - bytestring-trie-0.2.5.0
@@ -15,11 +17,10 @@ extra-deps:
 - haddock-api-2.23.0
 - haddock-library-1.8.0
 - hie-bios-0.3.2
-- hoogle-5.0.17.11
+- hoogle-5.0.17.14
 - hsimport-0.11.0
 - semigroups-0.18.5
 - temporary-1.2.1.1
-- haskell-src-exts-1.21.1
 - ilist-0.3.1.0
 - monad-dijkstra-0.1.1.2
 
@@ -30,7 +31,7 @@ flags:
     pedantic: true
 
 
-# allow-newer: true
+allow-newer: true
 
 nix:
   packages: [ icu libcxx zlib ]
